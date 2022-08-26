@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: null };
+  }
+  
   render() {
     return (
-      <button className="square">
-        {/* TODO */}
+      <button className="square" onClick={() => {console.log('clicked')}}>
+        {this.props.value}
       </button>
     );
   }
